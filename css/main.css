@@ -67,9 +67,40 @@ body {
 
 .navbar {
   grid-area: navbar;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fffafa;
   /*#afd6af  -- tu color yoner :)*/ 
 }
+.navbar .Logotipo{
+  width: 8em;
+  height: 100%;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  color: #0077be;
+}
+.navbar a{
+  text-decoration: none;
+  color: inherit;
+}
+.navbar .Logotipo img{
+  margin: auto;
+  margin-right: 0.5em;
+  width: 50px;
+  height: 50px;
+}
+.navbar ul{
+  display: flex;
+  list-style: none;
+}
+.navbar ul li{
+  margin: 30px;
+}
+
 
 .sidebar {
   grid-area: sidebar;
@@ -93,7 +124,7 @@ body {
   display: grid;
   gap: 10px;
   grid-template:
-    "header"  50vh
+    "header"  100vh
     "navbar"  50px
     "main"    auto
     "sidebar" 100px
@@ -116,7 +147,7 @@ body {
     "footer  footer"; */
 
     grid-template:
-      "header  header" 50vh
+      "header  header" 100vh
       "navbar  navbar" 50px
       "main    sidebar" auto
       "footer  footer" 100px /
@@ -134,11 +165,11 @@ body {
 @media (min-width: 900px) {
   .grid-container {
     grid-template:
-      "header  header  header"  50vh
-      "navbar  navbar  navbar"  50px
-      "main    main    sidebar" auto
+      "header  header  header"  100vh
+      "navbar  navbar  navbar"  70px
+      "main    main    sidebar" 1000px
       "footer  footer  footer"  100px /
-       auto     auto   400px;
+       auto    auto   400px;
   }
 
 
